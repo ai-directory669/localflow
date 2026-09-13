@@ -7,7 +7,7 @@
 
 > **Your private AI workspace that runs 100% offline. No cloud, no data leaks, no subscriptions.**
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel)](https://aiforwork.github.io/localflow/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=vercel)](https://ai-directory669.github.io/localflow/)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-Donate-ffdd00?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/aiforwork)
 
 ---
