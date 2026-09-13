@@ -26,7 +26,32 @@
 ---
 
 ## 🚀 Quick Start
+---
 
+## 🛠️ Available Tools
+
+### PDF to Text Converter
+
+Convert PDF files to text format - 100% offline and private.
+
+```bash
+# Navigate to src directory
+cd src
+
+# Run the application
+python main.py
+
+# Follow the prompts to convert your PDF
+```
+
+**Features:**
+- ✅ Works offline (no internet required)
+- ✅ No data leaves your computer
+- ✅ Supports all PDF files
+- ✅ Preserves text formatting
+- ✅ Saves output as .txt file
+
+**Example:**
 ### Installation (3 Easy Steps)
 
 ```bash
