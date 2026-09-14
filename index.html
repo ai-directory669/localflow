@@ -3,392 +3,713 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>LocalFlow - Privacy-First Local AI Assistant | 100% Offline</title>
-    <meta name="description" content="LocalFlow is a free, open-source AI assistant that runs 100% offline. No cloud, no data leaks. Perfect for developers who care about privacy.">
-    <meta name="keywords" content="local ai, offline ai, privacy ai, local llm, open source ai, free ai tools, github tools">
+
+    <title>Free Offline PDF to Text Converter | LocalFlow</title>
+
+    <meta name="description" content="Convert PDF files to text locally on your computer with LocalFlow. Free, open source and privacy-focused. No cloud upload, no subscription, and no file sharing.">
+
     <meta name="author" content="AI for Work">
-    <link rel="canonical" href="https://ai-directory669.github.io/localflow">
-    
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="LocalFlow - Privacy-First Local AI Assistant">
-    <meta property="og:description" content="100% offline AI assistant. Your data never leaves your computer. Free & open source.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://ai-directory669.github.io/localflow/">
+
+    <meta name="theme-color" content="#667eea">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Offline PDF to Text Converter | LocalFlow">
+    <meta property="og:description" content="Convert PDF files to text locally on your computer. Free, open source and privacy-focused.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ai-directory669.github.io/localflow">
-    <meta property="og:image" content="https://ai-directory669.github.io/localflow/assets/og-image.png">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LocalFlow - Privacy-First Local AI Assistant">
-    <meta name="twitter:description" content="Free, open-source, 100% offline AI assistant for developers.">
-    <meta name="twitter:image" content="https://ai-directory669.github.io/localflow/assets/og-image.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/localflow/assets/favicon.ico">
-    
-    <!-- Styles -->
+    <meta property="og:url" content="https://ai-directory669.github.io/localflow/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Free Offline PDF to Text Converter | LocalFlow">
+    <meta name="twitter:description" content="A free, open-source PDF to text converter that runs locally on your computer.">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
-        /* Hero Section */
+
+        /* Hero */
         .hero {
             text-align: center;
-            padding: 80px 20px;
+            padding: 80px 20px 70px;
             color: white;
         }
-        
+
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.4rem;
+            line-height: 1.15;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
+
         .hero .tagline {
             font-size: 1.5rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
+            font-weight: 600;
+            margin-bottom: 22px;
+            opacity: 0.97;
         }
-        
+
         .hero .subtitle {
             font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            opacity: 0.9;
+            max-width: 760px;
+            margin: 0 auto 35px;
+            opacity: 0.92;
         }
-        
-        /* CTA Buttons */
+
+        .badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.45);
+            border-radius: 30px;
+            background: rgba(255,255,255,0.12);
+            font-size: 0.92rem;
+        }
+
+        /* Buttons */
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 18px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 50px;
         }
-        
+
         .btn {
             display: inline-block;
-            padding: 15px 35px;
-            font-size: 1.1rem;
+            padding: 15px 32px;
+            font-size: 1.05rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        
+
         .btn-primary {
             background: white;
             color: #667eea;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
-        
+
         .btn-secondary {
             background: #ffdd00;
             color: #333;
         }
-        
+
         .btn-secondary:hover {
             background: #ffcc00;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
-        
+
         .btn-outline {
             background: transparent;
             border: 2px solid white;
             color: white;
         }
-        
+
         .btn-outline:hover {
             background: white;
             color: #667eea;
         }
-        
-        /* Features Section */
-        .features {
+
+        /* Main Content */
+        .content-section {
             background: white;
             border-radius: 20px;
-            padding: 60px 40px;
-            margin-top: 40px;
+            padding: 55px 40px;
+            margin-top: 35px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        
-        .features h2 {
+
+        .content-section h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
+            font-size: 2.35rem;
+            margin-bottom: 35px;
             color: #667eea;
         }
-        
+
+        .intro {
+            max-width: 820px;
+            margin: 0 auto;
+            text-align: center;
+            color: #555;
+            font-size: 1.08rem;
+        }
+
+        /* Feature Grid */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
         }
-        
+
         .feature-card {
-            padding: 30px;
+            padding: 28px;
             border-radius: 15px;
             background: #f8f9ff;
             border-left: 4px solid #667eea;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 18px rgba(0,0,0,0.1);
         }
-        
+
+        .feature-icon {
+            font-size: 2.3rem;
+            margin-bottom: 12px;
+        }
+
         .feature-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
-        
+
         .feature-card p {
             color: #666;
-            line-height: 1.7;
         }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 35px;
         }
-        
-        /* Donation Section */
+
+        .step {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #667eea;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .step h3 {
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: #666;
+        }
+
+        /* Privacy */
+        .privacy-box {
+            max-width: 850px;
+            margin: 35px auto 0;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8f9ff;
+            text-align: center;
+        }
+
+        .privacy-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .privacy-box p {
+            color: #666;
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            padding: 22px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .faq-item p {
+            color: #666;
+        }
+
+        /* Donation */
         .donation-section {
             background: white;
             border-radius: 20px;
-            padding: 60px 40px;
-            margin-top: 40px;
+            padding: 55px 40px;
+            margin-top: 35px;
             text-align: center;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        
+
         .donation-section h2 {
-            font-size: 2.5rem;
+            font-size: 2.35rem;
             color: #667eea;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
-        
+
         .donation-section p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #666;
-            max-width: 600px;
-            margin: 0 auto 30px;
+            max-width: 650px;
+            margin: 0 auto 28px;
         }
-        
+
         .donation-badge {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 15px 38px;
             background: linear-gradient(135deg, #ffdd00 0%, #ffcc00 100%);
             color: #333;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
             box-shadow: 0 6px 20px rgba(255, 221, 0, 0.4);
             transition: all 0.3s ease;
-            animation: pulse 2s infinite;
         }
-        
+
         .donation-badge:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(255, 221, 0, 0.5);
         }
-        
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 6px 20px rgba(255, 221, 0, 0.4);
-            }
-            50% {
-                box-shadow: 0 6px 25px rgba(255, 221, 0, 0.6);
-            }
-        }
-        
+
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 45px 20px;
             color: white;
-            margin-top: 60px;
+            margin-top: 25px;
         }
-        
+
         footer a {
             color: #ffdd00;
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .hero {
+                padding: 60px 15px;
             }
-            
+
+            .hero h1 {
+                font-size: 2.45rem;
+            }
+
             .hero .tagline {
                 font-size: 1.2rem;
             }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+
+            .hero .subtitle {
+                font-size: 1rem;
             }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                text-align: center;
-            }
-            
-            .features {
+
+            .content-section,
+            .donation-section {
                 padding: 40px 20px;
             }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
+
+            .content-section h2,
+            .donation-section h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 310px;
+                text-align: center;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>🚀 LocalFlow</h1>
-            <p class="tagline">Privacy-First Local AI Assistant</p>
-            <p class="subtitle">
-                Your private AI workspace that runs 100% offline. 
-                No cloud, no data leaks, no subscriptions. 
-                Free & open source for developers who care about privacy.
-            </p>
-            
-            <div class="cta-buttons">
-                <a href="https://github.com/ai-directory669/localflow" class="btn btn-primary">
-                    ⭐ View on GitHub
-                </a>
-                <a href="https://buymeacoffee.com/aiforwork" class="btn btn-secondary" target="_blank" rel="noopener">
-                    ☕ Buy Me a Coffee
-                </a>
-                <a href="#features" class="btn btn-outline">
-                    📖 Learn More
-                </a>
-            </div>
-        </section>
-        
-        <!-- Features Section -->
-        <section id="features" class="features">
-            <h2>✨ Why LocalFlow?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>100% Offline</h3>
-                    <p>Your data never leaves your computer. Complete privacy, zero cloud dependencies. Work without internet.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>Local LLM Support</h3>
-                    <p>Works seamlessly with Ollama, LM Studio, and llama.cpp. Run any open-source model locally.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📄</div>
-                    <h3>Document Q&A</h3>
-                    <p>Ask questions to your PDFs, DOCX, and TXT files. Get instant answers without uploading anywhere.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Code Review Assistant</h3>
-                    <p>AI-powered code analysis and suggestions. Your private code stays private, never uploaded to cloud.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3>Auto Documentation</h3>
-                    <p>Generate README, API docs, and code comments automatically. Save hours of manual work.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Fast & Lightweight</h3>
-                    <p>No heavy dependencies. Starts in seconds. Optimized for performance on any modern computer.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Donation Section -->
-        <section class="donation-section">
-            <h2>☕ Love LocalFlow?</h2>
-            <p>
-                This project is 100% free and open source. 
-                If LocalFlow helps you in your work, consider supporting the development with a coffee!
-            </p>
-            <a href="https://buymeacoffee.com/aiforwork" class="donation-badge" target="_blank" rel="noopener">
-                Buy Me a Coffee →
+
+<div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>📄 Free Offline PDF to Text Converter</h1>
+
+        <p class="tagline">
+            Convert PDF files to text privately on your computer
+        </p>
+
+        <p class="subtitle">
+            LocalFlow is a free and open-source PDF to text converter designed
+            for local use. Your PDF does not need to be uploaded to a cloud
+            service, helping you keep private documents under your control.
+        </p>
+
+        <div class="badge-row">
+            <span class="badge">🔒 Privacy-focused</span>
+            <span class="badge">💻 Runs locally</span>
+            <span class="badge">🆓 Free & open source</span>
+            <span class="badge">☁️ No cloud upload</span>
+        </div>
+
+        <div class="cta-buttons">
+
+            <a href="https://github.com/ai-directory669/localflow"
+               class="btn btn-primary">
+                ⭐ View on GitHub
             </a>
-            <p style="margin-top: 30px; font-size: 0.95rem; color: #888;">
-                Every coffee keeps the code flowing! ❤️
-            </p>
-        </section>
-        
-        <!-- Footer -->
-        <footer>
+
+            <a href="#how-it-works"
+               class="btn btn-outline">
+                📖 How It Works
+            </a>
+
+            <a href="https://buymeacoffee.com/aiforwork"
+               class="btn btn-secondary"
+               target="_blank"
+               rel="noopener">
+                ☕ Buy Me a Coffee
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="content-section">
+
+        <h2>What is LocalFlow?</h2>
+
+        <p class="intro">
+            LocalFlow is a privacy-focused local tool for converting PDF
+            documents into text. Instead of sending your documents to an
+            online PDF conversion service, LocalFlow is designed to process
+            them locally on your own computer.
+        </p>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="content-section">
+
+        <h2>Why Use LocalFlow?</h2>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy-Focused</h3>
+                <p>
+                    Your documents can stay on your own computer instead of
+                    being uploaded to a third-party cloud service.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3>PDF to Text Conversion</h3>
+                <p>
+                    Extract readable text from PDF files and save the result
+                    as a text file for further use.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>Runs Locally</h3>
+                <p>
+                    LocalFlow is designed to run on your own computer rather
+                    than requiring a browser-based file upload.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🆓</div>
+                <h3>Free & Open Source</h3>
+                <p>
+                    The project is available publicly on GitHub and can be
+                    used and explored without a paid subscription.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Simple Workflow</h3>
+                <p>
+                    Choose a PDF, run the local converter, and receive a
+                    text file containing the extracted content.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>No Cloud Dependency</h3>
+                <p>
+                    Local PDF processing can be useful when you do not want
+                    sensitive documents sent to an online service.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="content-section">
+
+        <h2>How to Convert PDF to Text</h2>
+
+        <p class="intro">
+            LocalFlow currently provides a simple local workflow for
+            converting PDF files into text.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Get LocalFlow</h3>
+                <p>
+                    Open the LocalFlow GitHub repository and follow the
+                    installation instructions.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Choose Your PDF</h3>
+                <p>
+                    Run LocalFlow on your computer and provide the path to
+                    the PDF file you want to convert.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Convert to Text</h3>
+                <p>
+                    LocalFlow processes the PDF locally and creates a text
+                    output file containing the extracted content.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRIVACY -->
+    <section class="content-section">
+
+        <h2>Why Offline PDF Conversion?</h2>
+
+        <div class="privacy-box">
+
+            <h3>🔐 Keep Private Documents Local</h3>
+
             <p>
-                Made with ❤️ by <a href="https://buymeacoffee.com/aiforwork" target="_blank" rel="noopener">AI for Work</a>
+                Online PDF converters require you to upload documents to
+                remote servers. A local converter provides an alternative
+                workflow where files can remain on your own computer.
+                This can be especially useful for private notes, internal
+                documents, research material and other files you prefer not
+                to upload.
             </p>
-            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
-                <a href="https://github.com/ai-directory669/localflow">GitHub</a> • 
-                <a href="https://buymeacoffee.com/aiforwork">Support</a> • 
-                <a href="https://github.com/ai-directory669/localflow/issues">Report Issue</a>
-            </p>
-            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
-                © 2026 LocalFlow. Licensed under MIT License.
-            </p>
-        </footer>
-    </div>
-    
-    <!-- Smooth Scroll Script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="content-section">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+
+            <div class="faq-item">
+                <h3>What does LocalFlow do?</h3>
+                <p>
+                    LocalFlow currently converts PDF files into text locally
+                    on your computer.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is LocalFlow free?</h3>
+                <p>
+                    Yes. LocalFlow is a free and open-source project available
+                    on GitHub.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does LocalFlow upload my PDF?</h3>
+                <p>
+                    LocalFlow is designed for local processing, so the PDF
+                    does not need to be uploaded to an online conversion
+                    service.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Who can use LocalFlow?</h3>
+                <p>
+                    Anyone who wants a simple, privacy-focused way to extract
+                    text from PDF documents locally can explore the project.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where can I get LocalFlow?</h3>
+                <p>
+                    The source code and project files are available on the
+                    LocalFlow GitHub repository.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="content-section">
+
+        <h2>Ready to Try LocalFlow?</h2>
+
+        <p class="intro" style="margin-bottom: 30px;">
+            Explore the source code, install LocalFlow on your computer,
+            and try local PDF to text conversion.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="https://github.com/ai-directory669/localflow"
+               class="btn btn-primary">
+                ⭐ Open LocalFlow on GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- DONATION -->
+    <section class="donation-section">
+
+        <h2>☕ Love LocalFlow?</h2>
+
+        <p>
+            LocalFlow is free and open source. If you find the project useful,
+            you can support its development with a coffee.
+        </p>
+
+        <a href="https://buymeacoffee.com/aiforwork"
+           class="donation-badge"
+           target="_blank"
+           rel="noopener">
+            Buy Me a Coffee →
+        </a>
+
+        <p style="margin-top: 25px; font-size: 0.95rem; color: #888;">
+            Every coffee helps keep the project moving. ❤️
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Made with ❤️ by
+            <a href="https://buymeacoffee.com/aiforwork"
+               target="_blank"
+               rel="noopener">
+                AI for Work
+            </a>
+        </p>
+
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.85;">
+
+            <a href="https://github.com/ai-directory669/localflow">
+                GitHub
+            </a>
+
+            • 
+
+            <a href="https://github.com/ai-directory669/localflow/issues">
+                Report Issue
+            </a>
+
+            • 
+
+            <a href="https://ai-directory669.github.io/free-ai-tools/">
+                More Free AI Tools
+            </a>
+
+        </p>
+
+        <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+            © 2026 LocalFlow. Licensed under MIT License.
+        </p>
+
+    </footer>
+
+</div>
+
 </body>
 </html>
